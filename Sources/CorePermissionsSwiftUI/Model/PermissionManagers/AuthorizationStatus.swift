@@ -22,7 +22,7 @@ public enum AuthorizationStatus: String, Hashable, Equatable {
     ///The `notDetermined` permission state, and the only state where it is possible to ask permission
     case notDetermined
     
-    public func allowsAccess() -> AllowButtonStatus {
+    func allowsAccess() -> AllowButtonStatus {
         switch self {
         case .authorized:
             return .allowed
