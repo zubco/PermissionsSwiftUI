@@ -21,6 +21,15 @@ public enum AuthorizationStatus: String, Hashable, Equatable {
     case temporary
     ///The `notDetermined` permission state, and the only state where it is possible to ask permission
     case notDetermined
+    
+    public func allowsAccess() -> Bool {
+        switch self {
+        case .authorized:
+            return true
+        default:
+            return false
+        }
+    }
 }
 
 
